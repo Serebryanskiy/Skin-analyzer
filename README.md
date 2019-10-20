@@ -1,4 +1,4 @@
-# Catificator 2.0: Android application for image classification
+# Skin analyzer : Android application for lesion classification
 
 Have you ever wondered whether this thing in your house is a cat or not? Well, now you can know for sure!
 
