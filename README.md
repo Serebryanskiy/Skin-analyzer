@@ -59,7 +59,7 @@ The model training is implemented in jupyter [notebook](./model.ipynb). Short de
 * Select the best model and check it on test set
 * Convert selected model to TFLite Flatbuffe for mobile application.
 
-THe training is not final, we're still experimenting with different model and augmentations to achive beter metrics.
+The training is not final, we're still experimenting with different model and augmentations to achive beter metrics.
 
 ## Android application 
 
