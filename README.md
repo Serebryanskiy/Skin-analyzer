@@ -10,9 +10,9 @@ The HAM10000 dataset consists of 10015 dermatoscopic images which can serve as a
 
 More than 50% of lesions are confirmed through histopathology (histo), the ground truth for the rest of the cases is either follow-up examination (follow_up), expert consensus (consensus), or confirmation by in-vivo confocal microscopy (confocal). The dataset includes lesions with multiple images, which can be tracked by the lesion_id-column within the HAM10000_metadata file.
 
-## Mode
+## Model
 There is always a trade-off between costs spent for a model training and the quality of a model. A practical approach is to use transfer learning — transferring the network weights trained on a previous task like ImageNet to a new task — to adapt a pre-trained deep classifier to our own requirements.
-In our app we are going to use transfer learning using Keras. One thing we need to take into account when making mobile application is the size of a model and it’s efficiency. Let’s look at the following table with models specs.
+In our app we are going to use transfer learning using Keras. One thing we need to take into account when making mobile application is the size of a model and it’s efficiency. We picked EfficentNet for the purpose of our application.
 
 ## About EfficientNet Models
 
