@@ -89,7 +89,7 @@ Clone the Catificator GitHub repository to your computer to get the
 application.
 
 ```
-git clone https://github.com/Serebryanskiy/Catificator-2.0.git
+git clone https://github.com/Serebryanskiy/Skin-analyzer.git
 ```
 
 Open the Catificator source code in Android Studio. To do this, open Android
@@ -134,7 +134,7 @@ will be installed. This will install the app on the device.
 
 <img src="images/classifydemo_img8.png?raw=true" style="width: 80%" />
 
-To test the app, open the app called `Catificator 2.0` on your device. When you run
+To test the app, open the app called `Skin Analyzer` on your device. When you run
 the app the first time, the app will request permission to access the camera.
 Re-installing the app may require you to uninstall the previous installations.
 
