@@ -39,18 +39,25 @@ EfficientNets achieve state-of-the-art accuracy on ImageNet with an order of mag
 
 * Compared to the widely used [ResNet-50](https://arxiv.org/abs/1512.03385), EfficientNet-B4 improves the top-1 accuracy from 76.3% of ResNet-50 to 82.6% (+6.3%), under similar FLOPS constraints.
 
+## Preprocessing
+
+Authors of HAM10000 dataset states they perform manual changes to image histograms to correct for over/under exposure and undesiredcolour  shifts.  In  our  work  we  perform  colour  constancy  on  all  of  our  additional  images  during  training  and  testing  as  apreprocessing  step  using  the  Shades  of  Gray  method  proposed  by  Finlayson  and  Trezzi    with  Minkowski  norm  p=6.
+
+We resize all images to 450x450 using central square crop.  We  perform  random  horizontal  flips and random rotations of [0, 90, 180, 270] degrees. All  networks  were  trained  in  a  similar  manner  to  their  original  implementations,  and  we  changed  only  the  initiallearning rate, the size of the last fully connected layer and the mean used for normalization.
+
+## Training
+
+The  key  metric  of  this  challenge  is  a  weighted  accuracy(WACC)  across  the  seven  classes.  This  is  equivalent  to  theaverage recall or sensitivity.
 
 The model training is implemented in jupyter [notebook](./model.ipynb). Short description of model training steps:
-* Set input size and batch size.
-* Preprocess images using Keras ImageDataGenerator (actually preprocessing is done only at the beginning of training)
-* Load Imagenet pretrained Xception model
-* Freeze first 110 layers
-* Set ModelCheckpoint callback
-* Train the model (change params, repeat)
+* Create dataset structure for Keras ImageDataGenerator.
+* Compute mean and std of entire dataset for standartization of images.
+* Define custom preprocess function ( apply Shades of Gray algorithm and standardization).
+* Load Imagenet pretrained EfficentNetB6 model
+* Train only last layer
+* Fine-tune all other layers
 * Select the best model and check it on test set
 * Convert selected model to TFLite Flatbuffe for mobile application.
-
-We managed to get 98.5% accuracy on validation set and 98.1% accuracy on test set. There are ways to improve accuracy even further, but it’s good enough for that type of application
 
 ## Android application 
 
