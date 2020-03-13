@@ -2,7 +2,7 @@
 
 Skin lesions are conditions that appear on a patientdue  to  many  different  reasons.  One  of  these  can  be  because of  an  abnormal  growth  in  skin  tissue,  defined  as  cancer.  This disease  plagues  more  than  14.1  million  patients  and  had  beenthe cause of more than 8.2 million deaths, worldwide
 
-We tried to make an android application with which a user can take a photo and figure out whether the mole is maligant or benigin.
+We tried to make an android application with which a user can take a photo and figure out whether the mole is malignant or benigin.
 
 ## Dataset
 
